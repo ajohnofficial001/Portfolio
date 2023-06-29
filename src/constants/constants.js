@@ -22,6 +22,9 @@ import {
   kentube,
   schoolfy,
   threejs,
+  wisdom,
+  muhammed,
+  joshua,
 } from "../assets";
 
 export const navLinks = [
@@ -53,7 +56,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Technical Writer",
     icon: creator,
   },
 ];
@@ -171,27 +174,27 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "John has always been a valuable team member who fostered a positive and collaborative work environment. What has impressed me the most about John is his ability to quickly grasp complex concepts and adapt to new technologies. He was always reliable, dependable, and consistently met project deadlines and I have no doubt that he will contribute positively to the growth of any organization he joins.",
+    name: "Muhammed Gberejaye",
+    designation: "Software Engineer",
+    company: "Aftj Digital",
+    image: muhammed,
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+      "John is a natural leader. I met him as an EducationUSA OFP (Opportunity Funds Program) Scholar, and he has demonstrated time and time again his leadership skills. He is always willing to take initiative where others might shy away from duty. John is a tech enthusiast. He is very interested in tech, especially programming, and this website proves it. He also knows how to identify and maximise opportunities. His resilience and dedication to his interests are evident in the certifications he has amased. I would not hesitate to give John my highest recommendation.",
+    name: "Wisdom Ifode",
+    designation: "Sophomore",
+    company: "Minerva University",
+    image: wisdom,
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "After John optimized our website, our traffic increased by 50%. We can't thank them enough!",
+    name: "Ogundairo Joshua",
+    designation: "Sophomore",
+    company: "FUNAAB",
+    image: joshua,
   },
 ];
 

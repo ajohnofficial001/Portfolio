@@ -29,6 +29,9 @@ import computerice from "./company/12.png";
 import intellectafrica from "./intellect.png";
 import kentube from "./kentube.png";
 import schoolfy from "./schoolfy.png";
+import wisdom from "./testimonial/wisdom.jpg";
+import muhammed from "./testimonial/muhammed.png";
+import joshua from "./testimonial/joshua.jpg";
 
 export {
   logo,
@@ -59,4 +62,7 @@ export {
   tailwind,
   typescript,
   threejs,
+  wisdom,
+  muhammed,
+  joshua,
 };
