@@ -1,6 +1,7 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import ScaleLoader from "react-spinners/ScaleLoader";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -16,6 +17,7 @@ const Contact = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+  const [isSubmitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -42,7 +44,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          setSubmitted(true);
 
           setForm({
             name: "",
@@ -59,6 +61,15 @@ const Contact = () => {
         }
       );
   };
+  useEffect(() => {
+    if (isSubmitted) {
+      const timeout = setTimeout(() => {
+        setSubmitted(false);
+      }, 3500);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [isSubmitted]);
 
   return (
     <div
@@ -70,7 +81,6 @@ const Contact = () => {
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
-
         <form
           ref={formRef}
           onSubmit={handleSubmit}
@@ -81,6 +91,7 @@ const Contact = () => {
             <input
               type="text"
               name="name"
+              required="required"
               value={form.name}
               onChange={handleChange}
               placeholder="John Doe"
@@ -92,6 +103,7 @@ const Contact = () => {
             <input
               type="email"
               name="email"
+              required="required"
               value={form.email}
               onChange={handleChange}
               placeholder="codex@example.com"
@@ -103,6 +115,7 @@ const Contact = () => {
             <textarea
               rows={7}
               name="message"
+              required="required"
               value={form.message}
               onChange={handleChange}
               placeholder="message :)"
@@ -110,11 +123,21 @@ const Contact = () => {
             />
           </label>
 
+          {isSubmitted && (
+            <div style={{ color: "green" }}>
+              Form submitted successfully. I will get back to you as soon as
+              possible.
+            </div>
+          )}
           <button
             type="submit"
             className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
           >
-            {loading ? "Sending..." : "Send"}
+            {loading ? (
+              <ScaleLoader color={"#ffffff"} loading={loading} height={15} />
+            ) : (
+              "Send"
+            )}
           </button>
         </form>
       </motion.div>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants/constants";
-import { logo, menu, close } from "../assets";
+import { nlogo, menu, close } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -23,10 +23,11 @@ const Navbar = () => {
           }}
         >
           {" "}
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-white text-[18px] font-bold cursor-pointe">
-            Johnkankode
-          </p>
+          <img
+            src={nlogo}
+            alt="logo"
+            className=" h-10 cursor-pointer text-[18px] object-contain"
+          />
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
@@ -51,9 +52,10 @@ const Navbar = () => {
           />
 
           <div
+            style={{ backgroundColor: "#09133e", color: "#6777c0" }}
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-x1`}
+            } p-6 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-lg`}
           >
             {" "}
             <ul className="list-none flex flex-row justify-end items-start flex-col gap-4">

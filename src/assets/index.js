@@ -1,4 +1,5 @@
 import logo from "./logo.svg";
+import nlogo from "./logo-no-background.png";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -35,6 +36,7 @@ import joshua from "./testimonial/joshua.jpg";
 
 export {
   logo,
+  nlogo,
   backend,
   intellectafrica,
   kentube,

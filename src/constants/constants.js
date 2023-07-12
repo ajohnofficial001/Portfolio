@@ -174,7 +174,7 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "John has always been a valuable team member who fostered a positive and collaborative work environment. What has impressed me the most about John is his ability to quickly grasp complex concepts and adapt to new technologies. He was always reliable, dependable, and consistently met project deadlines and I have no doubt that he will contribute positively to the growth of any organization he joins.",
+      "John has always been a valuable team member who fostered a positive and collaborative work environment. What has impressed me the most about John is his ability to quickly grasp complex concepts and adapt to new technologies.",
     name: "Muhammed Gberejaye",
     designation: "Software Engineer",
     company: "Aftj Digital",
@@ -182,7 +182,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "John is a natural leader. I met him as an EducationUSA OFP (Opportunity Funds Program) Scholar, and he has demonstrated time and time again his leadership skills. He is always willing to take initiative where others might shy away from duty. John is a tech enthusiast. He is very interested in tech, especially programming, and this website proves it. He also knows how to identify and maximise opportunities. His resilience and dedication to his interests are evident in the certifications he has amased. I would not hesitate to give John my highest recommendation.",
+      "John is a natural leader. I met him as an EducationUSA OFP (Opportunity Funds Program) Scholar, and he has demonstrated time and time again his leadership skills. He is always willing to take initiative where others might shy away from duty.",
     name: "Wisdom Ifode",
     designation: "Sophomore",
     company: "Minerva University",
