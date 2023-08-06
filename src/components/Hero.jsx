@@ -1,9 +1,44 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-
+import { HeroImage, MobileHero } from "../assets/index";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
+  const [shouldRender3DModel, setShouldRender3DModel] = useState(true);
+  const isMobileScreen = window.innerWidth <= 500;
+
+  useEffect(() => {
+    async function checkInternetSpeed() {
+      try {
+        const connection =
+          navigator.connection ||
+          navigator.mozConnection ||
+          navigator.webkitConnection;
+        if (!connection) {
+          console.log("Internet connection API not supported");
+          return;
+        }
+
+        const { effectiveType, downlink } = connection;
+
+        const downlinkMbps = downlink * 0.001;
+
+        const thresholdSpeedMbps = 5; // Adjust this threshold as needed
+
+        if (downlinkMbps >= thresholdSpeedMbps) {
+          setShouldRender3DModel(true);
+        } else {
+          setShouldRender3DModel(false);
+        }
+      } catch (error) {
+        console.error("Error checking internet speed:", error);
+      }
+    }
+
+    checkInternetSpeed();
+  }, []);
+
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -24,8 +59,13 @@ const Hero = () => {
           </p>
         </div>
       </div>
-
-      <ComputersCanvas />
+      {isMobileScreen ? (
+        <img src={MobileHero} className="heroImage" alt="Mobile Hero Image" />
+      ) : shouldRender3DModel ? (
+        <ComputersCanvas />
+      ) : (
+        <img src={HeroImage} className="heroImage" alt="Hero Image" />
+      )}
 
       <div className="absolute xs:bottom-10 bottom-15 w-full flex justify-center items-center">
         <a href="#about">

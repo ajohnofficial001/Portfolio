@@ -1,5 +1,4 @@
-import logo from "./logo.svg";
-import nlogo from "./logo-no-background.png";
+import Nlogo from "./logo-no-background.png";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -33,16 +32,17 @@ import schoolfy from "./schoolfy.png";
 import wisdom from "./testimonial/wisdom.jpg";
 import muhammed from "./testimonial/muhammed.png";
 import joshua from "./testimonial/joshua.jpg";
+import HeroImage from "./hero.jpg";
+import MobileHero from "./mobile-hero.png";
 
 export {
-  logo,
-  nlogo,
   backend,
   intellectafrica,
   kentube,
   schoolfy,
   creator,
   mobile,
+  Nlogo,
   mui,
   sass,
   bootstrap,
@@ -67,4 +67,6 @@ export {
   wisdom,
   muhammed,
   joshua,
+  HeroImage,
+  MobileHero,
 };

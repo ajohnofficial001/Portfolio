@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants/constants";
-import { nlogo, menu, close } from "../assets";
+import { Nlogo, menu, close } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -24,7 +24,7 @@ const Navbar = () => {
         >
           {" "}
           <img
-            src={nlogo}
+            src={Nlogo}
             alt="logo"
             className=" h-10 cursor-pointer text-[18px] object-contain"
           />
