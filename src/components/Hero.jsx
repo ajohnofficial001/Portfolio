@@ -62,7 +62,8 @@ const Hero = () => {
       {shouldRender3DModel ? (
         <ComputersCanvas />
       ) : (
-        <img src={HeroImage} className="heroImage" alt="Hero Image" />
+        <ComputersCanvas />
+        {/*<img src={HeroImage} className="heroImage" alt="Hero Image" /> */}
       )}
 
       <div className="absolute xs:bottom-10 bottom-15 w-full flex justify-center items-center">
