@@ -59,9 +59,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      {isMobileScreen ? (
-        <img src={MobileHero} className="heroImage" alt="Mobile Hero Image" />
-      ) : shouldRender3DModel ? (
+      {shouldRender3DModel ? (
         <ComputersCanvas />
       ) : (
         <img src={HeroImage} className="heroImage" alt="Hero Image" />
