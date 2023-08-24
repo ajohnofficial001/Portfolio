@@ -190,7 +190,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "After John optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      "John has been a great friend of mine. I recommend him enthusiastically for anything excellent",
     name: "Ogundairo Joshua",
     designation: "Sophomore",
     company: "FUNAAB",
@@ -240,8 +240,8 @@ const projects = [
       },
     ],
     image: intellectafrica,
-    source_code_link: "",
-    web_link: "https://intellect-africa.live/",
+    source_code_link: "#",
+    web_link: "https://intellect-africa.netlify.app",
   },
   {
     name: "Kentube",
